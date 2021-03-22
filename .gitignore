@@ -3,3 +3,11 @@
 ################################################################################
 
 /TKSolution/.vs/TKSolution
+/TKSolution/TKSolution.API/bin/Debug/net5.0
+/TKSolution/TKSolution.API/obj
+/TKSolution/TKSolution.Application/bin/Debug/net5.0
+/TKSolution/TKSolution.Application/obj
+/TKSolution/TKSolution.Core/bin/Debug/net5.0
+/TKSolution/TKSolution.Core/obj
+/TKSolution/TKSolution.Data/bin/Debug/net5.0
+/TKSolution/TKSolution.Data/obj

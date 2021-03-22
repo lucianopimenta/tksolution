@@ -1,0 +1,64 @@
+<div class="page-header">
+    <h1>Detalhes do profissional</h1>
+    <div class="container-fluid">
+        
+        <form [formGroup]="registerForm">
+            <div class="container">
+                <br />
+                <!-- Campos -->
+                <div class="row">
+                    <div class="col-md-12">
+                        <mat-form-field appearance="outline">
+                            <mat-label>Nome</mat-label>
+                            <input matInput type="text" formControlName="Name"
+                                placeholder="Digite o nome" [(ngModel)]="entity.Name">
+                            <mat-error *ngIf="hasError('Name', 'required')">Nome é
+                                <strong>obrigatório</strong>
+                            </mat-error>
+                        </mat-form-field>
+                    </div>
+                </div>
+                <div class="row">
+                    <div class="col-md-4">
+                        <mat-form-field appearance="outline">
+                            <mat-label>CPF</mat-label>
+                            <input matInput type="text" [readonly]="edit?'':null"
+                                formControlName="CPF" [(ngModel)]="entity.CPF"
+                                placeholder="Digite O CPF" mask="000.000.000-00">
+                            <mat-error *ngIf="hasError('CPF', 'required')">CPF é
+                                <strong>obrigatório</strong>
+                            </mat-error>
+                        </mat-form-field>
+                    </div>
+                    <div class="col-md-4">
+                        <mat-form-field appearance="outline">
+                            <mat-label>Tipo de documento</mat-label>
+                            <mat-select formControlName="TypeClassDocument" [(ngModel)]="entity.TypeClassDocument" [disabled]="edit?'':null">
+                                <mat-option *ngFor="let x of dataTypeClassDocument" [value]="x.Value">{{x.Text}}</mat-option>
+                            </mat-select>
+                            <mat-error *ngIf="hasError('TypeClassDocument', 'required')">Tipo de documento é <strong>obrigatório</strong>
+                            </mat-error>
+                        </mat-form-field>
+                    </div>
+                    <div class="col-md-4">
+                        <mat-form-field appearance="outline">
+                            <mat-label>Número do documento</mat-label>
+                            <input matInput formControlName="TypeNumber" [readonly]="edit?'':null" placeholder="Digite o número do documento"
+                                [(ngModel)]="entity.TypeNumber">
+                        </mat-form-field>
+                    </div>
+                </div>
+                
+            </div>
+        </form>
+
+    </div>
+</div>
+<div class="row">
+    <div class="col-sm-12">
+        <div class="footer">
+            <button mat-raised-button (click)="onBack()">Voltar</button>&nbsp;
+            <button mat-raised-button (click)="onSubmit()" style="background-color: #1C97FF; color: white;">Salvar</button>
+        </div>
+    </div>
+</div>

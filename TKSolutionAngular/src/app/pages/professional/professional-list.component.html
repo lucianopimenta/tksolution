@@ -1,0 +1,70 @@
+<!-- filtro -->
+<div class="page-header">
+    <!-- Filtros -->
+    <div class="row">
+        <div class="col-sm-6">
+            <mat-form-field appearance="outline">
+                <input matInput type="text" placeholder="Buscar por nome" [(ngModel)]="nameInput" (keydown.enter)="load()">
+                <button type="button" mat-button matPrefix (click)="load()">
+                    <mat-icon>search</mat-icon>
+                </button>
+                <button mat-button *ngIf="nameInput" matSuffix mat-icon-button aria-label="Clear" (click)="nameInput='';load()">
+                    <mat-icon>close</mat-icon>
+                  </button>
+            </mat-form-field>
+        </div>
+        <div class="col-sm-6 text-right align-self-center">
+            <button mat-raised-button style="background-color: #1C97FF; color: white;" (click)="removeSelected()">Remover selecionados</button>&nbsp;
+            <button mat-raised-button style="background-color: #1C97FF; color: white;" (click)="onNew()">Novo</button>
+        </div>
+    </div>
+</div>
+<!-- listagem -->
+<div class="page-header">
+<div class="row">
+    <div class="col-sm-12">
+
+        <!-- Listagem -->
+        <div class="mat-elevation-z8">
+            <table mat-table [dataSource]="dataSource" matSort class="mat-elevation-z8">
+
+                <ng-container matColumnDef="Name">
+                    <th mat-header-cell *matHeaderCellDef mat-sort-header><strong>Nome</strong></th>
+                    <td mat-cell *matCellDef="let professional">
+                        <a [routerLink]="['/pages/professional/edit/', professional.Code]" routerLinkActive="router-link-active">{{ professional.Name }}</a>
+                    </td>
+                </ng-container>
+
+                <ng-container matColumnDef="CPF">
+                    <th mat-header-cell *matHeaderCellDef mat-sort-header><strong>CPF</strong></th>
+                    <td mat-cell *matCellDef="let professional"> {{ professional.CPF | mask: '000.000.000-00' }} </td>
+                </ng-container>
+
+                <ng-container matColumnDef="TypeClassDescription">
+                    <th mat-header-cell *matHeaderCellDef mat-sort-header><strong>Documento da classe</strong></th>
+                    <td mat-cell *matCellDef="let professional"> {{ professional.TypeClassDescription }} </td>
+                </ng-container>
+
+                <ng-container matColumnDef="StatusDescription">
+                    <th mat-header-cell *matHeaderCellDef mat-sort-header><strong>Status</strong></th>
+                    <td mat-cell *matCellDef="let professional"> {{ professional.StatusDescription }} </td>
+                </ng-container>
+
+                <ng-container matColumnDef="Selected">
+                    <th mat-header-cell *matHeaderCellDef class="align-center">
+                        <mat-checkbox (change)="selectedAll($event)" color="primary"></mat-checkbox>
+                    </th>
+                    <td mat-cell *matCellDef="let professional" align="center">
+                        <mat-checkbox [(ngModel)]="professional.Selected" color="primary"></mat-checkbox>
+                    </td>
+                </ng-container>
+                
+                <tr mat-header-row *matHeaderRowDef="columnsData"></tr>
+                <tr mat-row *matRowDef="let rowData; columns: columnsData"></tr>
+
+            </table>
+            <mat-paginator [pageSizeOptions]="[5, 10, 20]" [pageSize]="10" showFirstLastButtons></mat-paginator>
+        </div>
+    </div>
+</div>
+</div>

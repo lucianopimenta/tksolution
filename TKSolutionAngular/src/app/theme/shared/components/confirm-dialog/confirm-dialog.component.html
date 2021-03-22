@@ -1,0 +1,23 @@
+<!-- <div class="header">
+    <h1 mat-dialog-title>{{ data.title } }}</h1>
+</div>
+<div mat-dialog-content>
+    <p class="dialog-message">{{ data.message }}</p>
+</div>
+<div mat-dialog-actions>
+    <button class="btn btn-cancel" style="margin-right:10px;" (click)="cancel()">{{ data.cancelText }}</button>
+    <button class="btn" (click)="confirm()">{{ data.confirmText }}</button>
+</div> -->
+
+<h2 mat-dialog-title>{{ data.title }}</h2>
+<mat-divider></mat-divider>
+
+<mat-dialog-content>
+  <div style="padding: 20px">{{ data.message }}</div>
+</mat-dialog-content>
+
+<mat-divider></mat-divider>
+<mat-dialog-actions align="end">
+  <button mat-raised-button [mat-dialog-close]="false">{{ data.cancelText }}</button>
+  <button mat-raised-button color="primary" mat-dialog-close="true">{{ data.confirmText }}</button>  
+</mat-dialog-actions>

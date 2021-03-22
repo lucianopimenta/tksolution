@@ -1,0 +1,54 @@
+﻿
+Microsoft Visual Studio Solution File, Format Version 12.00
+# Visual Studio Version 16
+VisualStudioVersion = 16.0.31025.194
+MinimumVisualStudioVersion = 10.0.40219.1
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "TKSolution.API", "TKSolution.API\TKSolution.API.csproj", "{82E82E0C-2DE3-4A78-81F1-CB29787A2076}"
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "TKSolution.Data", "TKSolution.Data\TKSolution.Data.csproj", "{28C9D2AA-952A-4914-AE78-F001BC016F88}"
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "TKSolution.Application", "TKSolution.Application\TKSolution.Application.csproj", "{9260B849-26DF-4DA2-BAF9-77D694BC1147}"
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "TKSolution.Core", "TKSolution.Core\TKSolution.Core.csproj", "{7A924F74-E535-420A-87B3-0EB2BAD832F6}"
+EndProject
+Global
+	GlobalSection(SolutionConfigurationPlatforms) = preSolution
+		Debug|Any CPU = Debug|Any CPU
+		Release|Any CPU = Release|Any CPU
+	EndGlobalSection
+	GlobalSection(ProjectConfigurationPlatforms) = postSolution
+		{82E82E0C-2DE3-4A78-81F1-CB29787A2076}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{82E82E0C-2DE3-4A78-81F1-CB29787A2076}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{82E82E0C-2DE3-4A78-81F1-CB29787A2076}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{82E82E0C-2DE3-4A78-81F1-CB29787A2076}.Release|Any CPU.Build.0 = Release|Any CPU
+		{28C9D2AA-952A-4914-AE78-F001BC016F88}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{28C9D2AA-952A-4914-AE78-F001BC016F88}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{28C9D2AA-952A-4914-AE78-F001BC016F88}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{28C9D2AA-952A-4914-AE78-F001BC016F88}.Release|Any CPU.Build.0 = Release|Any CPU
+		{9260B849-26DF-4DA2-BAF9-77D694BC1147}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{9260B849-26DF-4DA2-BAF9-77D694BC1147}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{9260B849-26DF-4DA2-BAF9-77D694BC1147}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{9260B849-26DF-4DA2-BAF9-77D694BC1147}.Release|Any CPU.Build.0 = Release|Any CPU
+		{7A924F74-E535-420A-87B3-0EB2BAD832F6}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{7A924F74-E535-420A-87B3-0EB2BAD832F6}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{7A924F74-E535-420A-87B3-0EB2BAD832F6}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{7A924F74-E535-420A-87B3-0EB2BAD832F6}.Release|Any CPU.Build.0 = Release|Any CPU
+	EndGlobalSection
+	GlobalSection(SolutionProperties) = preSolution
+		HideSolutionNode = FALSE
+	EndGlobalSection
+	GlobalSection(ExtensibilityGlobals) = postSolution
+		SolutionGuid = {D7270794-3047-4DCF-B425-A0A8662925C6}
+	EndGlobalSection
+	GlobalSection(AutomaticVersions) = postSolution
+		UpdateAssemblyVersion = True
+		UpdateAssemblyFileVersion = True
+		UpdateAssemblyInfoVersion = True
+		AssemblyVersionSettings = None.None.None.None
+		AssemblyFileVersionSettings = None.None.None.None
+		AssemblyInfoVersionSettings = None.None.None.None
+		UpdatePackageVersion = False
+		AssemblyInfoVersionType = SettingsVersion
+		InheritWinAppVersionFrom = None
+	EndGlobalSection
+EndGlobal
